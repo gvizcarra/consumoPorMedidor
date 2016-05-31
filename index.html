@@ -138,7 +138,7 @@
 <body>
 
 <div class="app"> 
-            <h1>Apache Cordova</h1>
+            <h1 id="h1id">Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
@@ -216,6 +216,7 @@
 		var i=0;
 		
 		$("#verificar").on("click",function(){
+		$("#h1id").text("click");
 			event.preventDefault();
 		
 			$.getJSON("http://10.6.2.103/portal/phoneGap/consumoHistoricoSicom_json.php?medidor="+medidor.val(), function(result){
